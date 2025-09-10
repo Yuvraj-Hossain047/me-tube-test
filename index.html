@@ -22,7 +22,7 @@
                             <path d="m21 21-4.3-4.3"></path>
                         </g>
                     </svg>
-                    <input type="search" class="grow" placeholder="Search" />
+                    <input id="search-input" type="search" class="grow" placeholder="Search" />
                     <kbd class="kbd kbd-sm">⌘</kbd>
                     <kbd class="kbd kbd-sm">K</kbd>
                 </label>
@@ -35,15 +35,22 @@
     <nav id="categories" class="py-2 flex justify-center gap-5"></nav>
     <section>
         <div id="videos" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-
         </div>
-
     </section>
 
-
-
-
-
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn hidden" onclick="customModal.showModal()">open modal</button>
+    <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+        <div id="modal-content"></div>
+        <div class="modal-action">
+        <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+        </form>
+        </div>
+    </div>
+    </dialog>
 
     <script src="./scripts/video.js"></script>
     <script src="./scripts/script.js"></script>
